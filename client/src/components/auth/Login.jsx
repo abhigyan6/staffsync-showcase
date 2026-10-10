@@ -19,6 +19,7 @@ import {
   CheckCircle,
 } from "@phosphor-icons/react";
 import Brand from "../Brand";
+import CopyrightFooter from "../CopyrightFooter";
 import DashboardPreview from "./DashboardPreview";
 import { api, message } from "../../api";
 import { signedIn } from "../../store";
@@ -289,7 +290,7 @@ export default function Login() {
             </Link>
           </p>
         </div>
-        <p className="login-copyright">StaffSync · A little more in sync.</p>
+        <CopyrightFooter variant="auth" />
       </main>
     </div>
   );

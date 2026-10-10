@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, TextField, MenuItem, Alert } from "@mui/material";
 import Brand from "../Brand";
+import CopyrightFooter from "../CopyrightFooter";
 import { api, message } from "../../api";
 
 export default function Register() {
@@ -119,6 +120,7 @@ export default function Register() {
             Back to sign in
           </Button>
         </div>
+        <CopyrightFooter variant="auth" />
       </main>
     </div>
   );

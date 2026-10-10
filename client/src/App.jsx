@@ -53,6 +53,7 @@ import { loadSession, signedOut } from "./store";
 import { api, message, dateLabel, fullName } from "./api";
 import { AppContext, useResource } from "./hooks";
 import { Avatar, Loading, Empty, Status } from "./components";
+import CopyrightFooter from "./components/CopyrightFooter";
 import Login from "./Login";
 import Brand from "./components/Brand";
 import ProtectedRoute from "./routes/ProtectedRoute";
@@ -344,14 +345,7 @@ function Shell({ children }) {
         <main className="page-content" id="main-content" tabIndex={-1}>
           {children}
         </main>
-        <footer className="app-footer">
-          <span>StaffSync</span>
-          <span>
-            {user.email.endsWith("@staffsync.demo")
-              ? "Demo workspace · Fictional sample data"
-              : "People, connected."}
-          </span>
-        </footer>
+        <CopyrightFooter />
       </div>
       <Menu anchorEl={anchor} open={!!anchor} onClose={() => setAnchor(null)}>
         <MenuItem
