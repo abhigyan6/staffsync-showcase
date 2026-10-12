@@ -13,6 +13,7 @@ import {
   training,
 } from "./schemas.js";
 import * as auth from "../controllers/authController.js";
+import { passwordAttemptLimit } from "../middleware/abuseLimits.js";
 const router = Router();
 router.post(
   "/auth/register",
@@ -48,6 +49,7 @@ router.get("/auth/me", auth.me);
 router.post("/auth/logout", auth.logout);
 router.post(
   "/auth/password",
+  passwordAttemptLimit,
   validate(
     z.object({
       currentPassword: text(128),
