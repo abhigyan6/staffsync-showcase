@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  Button,
-  Alert,
-  ToggleButton,
-  ToggleButtonGroup,
-  Divider,
-} from "@mui/material";
+import { Button, Alert, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { Sun, Moon, LockKey, ShieldCheck } from "@phosphor-icons/react";
 import { useApp } from "../hooks";
 import { api, message } from "../api";

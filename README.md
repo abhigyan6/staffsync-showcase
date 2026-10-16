@@ -76,7 +76,7 @@ server/
 render.yaml              Free Render deployment blueprint
 ```
 
-React calls Express REST APIs. Authentication, authorization, and input validation run before controllers access Mongoose models. Collections represent users, employees, leaves, attendance, announcements, training, notifications, and audits. Managers use the Manager user role and employee reporting relationships. Compatibility entry points remain because existing routes, imports, and Docker configuration use them.
+React calls Express REST APIs. Authentication, authorization, and input validation run before controllers access Mongoose models. Collections represent users, employees, leaves, attendance, announcements, training, notifications, and audits. Managers use the Manager user role and employee reporting relationships.
 
 ## Authentication and access
 

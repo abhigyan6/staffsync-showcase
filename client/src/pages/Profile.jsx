@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Button, Alert, Divider } from "@mui/material";
-import {
-  Camera,
-  FloppyDisk,
-  Star,
-  EnvelopeSimple,
-  MapPin,
-} from "@phosphor-icons/react";
+import { Button, Alert } from "@mui/material";
+import { Camera, FloppyDisk, Star } from "@phosphor-icons/react";
 import { useResource, useApp } from "../hooks";
 import { api, message, dateLabel, fullName } from "../api";
 import { loadSession } from "../store";

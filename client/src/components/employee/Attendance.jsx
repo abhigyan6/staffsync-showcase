@@ -1,21 +1,9 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Button, TextField, IconButton, Tooltip } from "@mui/material";
-import {
-  CalendarCheck,
-  Clock,
-  PencilSimple,
-  DownloadSimple,
-} from "@phosphor-icons/react";
+import { CalendarCheck, PencilSimple } from "@phosphor-icons/react";
 import { useResource, useApp } from "../../hooks";
-import {
-  api,
-  message,
-  dateLabel,
-  hours,
-  downloadCsv,
-  fullName,
-} from "../../api";
+import { api, message, dateLabel, hours, fullName } from "../../api";
 import {
   PageHeading,
   Panel,

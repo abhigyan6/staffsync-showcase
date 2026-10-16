@@ -1,24 +1,11 @@
+import { Employee, Training } from "../models/index.js";
 import {
-  Employee,
-  Leave,
-  Attendance,
-  Announcement,
-  Training,
-  Notification,
-  User,
-} from "../models/index.js";
-import {
-  accessibleEmployees,
-  assertEmployee,
   ownEmployee,
   scope,
-  day,
-  span,
   fail,
   notify,
   audit,
   pagination,
-  literal,
 } from "../services/core.js";
 export async function trainings(req, res) {
   const q =

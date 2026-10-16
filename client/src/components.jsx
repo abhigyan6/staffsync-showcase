@@ -11,19 +11,10 @@ import {
   Skeleton,
   Alert,
   Pagination,
-  Tooltip,
   IconButton,
   CircularProgress,
 } from "@mui/material";
-import {
-  ArrowUpRight,
-  Tray,
-  WarningCircle,
-  X,
-  Check,
-  CalendarBlank,
-  DownloadSimple,
-} from "@phosphor-icons/react";
+import { Tray, X, Check } from "@phosphor-icons/react";
 import { fullName, dateLabel, api, message } from "./api";
 import { useApp } from "./hooks";
 export function Icon({ as: Component, size = 20, ...props }) {

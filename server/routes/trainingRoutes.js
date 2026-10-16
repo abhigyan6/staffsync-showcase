@@ -1,17 +1,8 @@
 import { Router } from "express";
 import { z } from "zod";
-import rateLimit from "express-rate-limit";
-import { authenticate, roles } from "../middleware/authMiddleware.js";
+import { roles } from "../middleware/authMiddleware.js";
 import { validate } from "../middleware/security.js";
-import {
-  text,
-  securePassword,
-  id,
-  date,
-  employee,
-  announcement,
-  training,
-} from "./schemas.js";
+import { training } from "./schemas.js";
 import * as w from "../controllers/trainingController.js";
 const router = Router();
 router.get("/training", w.trainings);

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import {
   Button,
-  Chip,
   TextField,
   MenuItem,
   IconButton,
@@ -10,13 +9,7 @@ import {
   FormControlLabel,
   Switch,
 } from "@mui/material";
-import {
-  Plus,
-  Megaphone,
-  PushPin,
-  PencilSimple,
-  Trash,
-} from "@phosphor-icons/react";
+import { Plus, PushPin, PencilSimple, Trash } from "@phosphor-icons/react";
 import { useApp, useResource } from "../../hooks";
 import { api, message, dateLabel } from "../../api";
 import {

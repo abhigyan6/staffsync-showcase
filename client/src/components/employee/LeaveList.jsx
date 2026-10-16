@@ -2,14 +2,8 @@ import LeaveApply from "./LeaveApply";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { Button, TextField, MenuItem, Tabs, Tab, Alert } from "@mui/material";
-import {
-  Plus,
-  CalendarBlank,
-  Clock,
-  CheckCircle,
-  XCircle,
-} from "@phosphor-icons/react";
+import { Button, Tabs, Tab } from "@mui/material";
+import { Plus, CalendarBlank } from "@phosphor-icons/react";
 import { useApp, useResource } from "../../hooks";
 import { api, message, dateLabel } from "../../api";
 import {
@@ -21,8 +15,6 @@ import {
   Failure,
   Empty,
   Pager,
-  Field,
-  FormDialog,
   LeaveReview,
 } from "../../components";
 const defaults = { type: "Annual", startDate: "", endDate: "", reason: "" };

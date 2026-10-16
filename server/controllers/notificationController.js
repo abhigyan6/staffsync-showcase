@@ -1,25 +1,5 @@
-import {
-  Employee,
-  Leave,
-  Attendance,
-  Announcement,
-  Training,
-  Notification,
-  User,
-} from "../models/index.js";
-import {
-  accessibleEmployees,
-  assertEmployee,
-  ownEmployee,
-  scope,
-  day,
-  span,
-  fail,
-  notify,
-  audit,
-  pagination,
-  literal,
-} from "../services/core.js";
+import { Notification } from "../models/index.js";
+
 export async function notifications(req, res) {
   res.json({
     items: await Notification.find({ recipient: req.user._id })

@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import {
   Button,
-  Chip,
   Checkbox,
   FormControlLabel,
   IconButton,
@@ -22,7 +21,6 @@ import {
   PencilSimple,
   Trash,
   BookOpen,
-  CheckCircle,
 } from "@phosphor-icons/react";
 import { useResource, useApp } from "../../hooks";
 import { api, message, dateLabel, fullName } from "../../api";

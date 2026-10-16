@@ -9,22 +9,15 @@ import {
   IconButton,
   Tooltip,
   Drawer,
-  Chip,
   Divider,
-  Alert,
 } from "@mui/material";
 import {
   MagnifyingGlass,
   Plus,
   PencilSimple,
   Trash,
-  UsersThree,
   X,
-  EnvelopeSimple,
-  Phone,
-  MapPin,
   Star,
-  CalendarBlank,
 } from "@phosphor-icons/react";
 import { api, message, fullName, dateLabel } from "../../api";
 import { useApp, useResource } from "../../hooks";

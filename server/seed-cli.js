@@ -1,6 +1,6 @@
 import "dotenv/config";
 import mongoose from "mongoose";
-import { connectDatabase } from "./db.js";
+import { connectDatabase } from "./config/db.js";
 import { seed } from "./seed.js";
 const mongo = await connectDatabase();
 await seed();

@@ -7,13 +7,7 @@ import {
   Announcement,
   Audit,
 } from "../models/index.js";
-import {
-  scope,
-  accessibleEmployees,
-  ownEmployee,
-  day,
-  fail,
-} from "../services/core.js";
+import { scope, day, fail } from "../services/core.js";
 export async function dashboard(req, res) {
   const employees = await Employee.find({
     ...(await scope(req.user)),

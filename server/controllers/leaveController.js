@@ -1,24 +1,14 @@
-import {
-  Employee,
-  Leave,
-  Attendance,
-  Announcement,
-  Training,
-  Notification,
-  User,
-} from "../models/index.js";
+import { Employee, Leave, User } from "../models/index.js";
 import {
   accessibleEmployees,
   assertEmployee,
   ownEmployee,
-  scope,
   day,
   span,
   fail,
   notify,
   audit,
   pagination,
-  literal,
 } from "../services/core.js";
 export async function leaves(req, res) {
   const ids = (await accessibleEmployees(req.user)).map((e) => e._id);

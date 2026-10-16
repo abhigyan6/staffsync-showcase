@@ -1,11 +1,4 @@
-import mongoose from "mongoose";
-import {
-  User,
-  Employee,
-  Attendance,
-  Leave,
-  Training,
-} from "../models/index.js";
+import { User, Employee } from "../models/index.js";
 import {
   scope,
   assertEmployee,

@@ -26,7 +26,6 @@ import {
   DialogContent,
   TextField,
   InputAdornment,
-  Chip,
 } from "@mui/material";
 import {
   SquaresFour,
@@ -43,19 +42,15 @@ import {
   SignOut,
   MagnifyingGlass,
   CaretDown,
-  Command,
-  Sun,
-  Moon,
   List,
   X,
-  Check,
 } from "@phosphor-icons/react";
 import { loadSession, signedOut } from "./store";
-import { api, message, dateLabel, fullName } from "./api";
+import { api, dateLabel, fullName } from "./api";
 import { AppContext, useResource } from "./hooks";
-import { Avatar, Loading, Empty, Status } from "./components";
+import { Avatar, Loading, Empty } from "./components";
 import CopyrightFooter from "./components/CopyrightFooter";
-import Login from "./Login";
+import Login from "./components/auth/Login";
 import Brand from "./components/Brand";
 import ProtectedRoute from "./routes/ProtectedRoute";
 const Register = lazy(() => import("./components/auth/Register"));
