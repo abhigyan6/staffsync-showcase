@@ -35,7 +35,7 @@ The app also includes in-app notifications, live updates using server-sent event
 
 ## Run locally
 
-Requires **Node.js 22.12+** and npm. Internet access is needed for dependencies and the first embedded MongoDB download.
+Use a Windows, macOS, or Linux computer with **Node.js 22.12+**, npm, Git, and a modern browser. Internet access is needed for dependencies and the first embedded MongoDB download. The embedded database also requires an operating system supported by MongoDB. Phones and tablets can open the hosted demo; this setup runs the server on a computer.
 
 ```sh
 git clone https://github.com/abhigyan6/staffsync-showcase.git
@@ -48,7 +48,18 @@ Open **http://127.0.0.1:5173**. The API runs on port **4000**.
 
 With `MONGODB_URI` unset, development starts a real embedded MongoDB database and seeds fictional records. Its files persist in `.runtime/mongodb`; it is not a browser mock. A local JWT secret is generated automatically. Runtime data and secrets are excluded from Git.
 
-To connect your own database, run `cp .env.example .env` and set `MONGODB_URI` in `.env`. Set `SEED_DEMO=false` for a database that should not receive the demo seed. Hosted deployments also require a strong `JWT_SECRET`. Keep credentials server-side and never commit `.env`.
+No `.env` file or MongoDB account is needed for the default local demo. To connect your own database, copy `.env.example` to a new file named `.env` in your editor and set `MONGODB_URI`. Set `SEED_DEMO=false` for a database that should not receive the demo seed. Hosted deployments also require a strong `JWT_SECRET`. Keep credentials server-side and never commit `.env`.
+
+To run the built application locally from one address:
+
+```sh
+npm run build
+npm start
+```
+
+Open **http://127.0.0.1:4000**. Stop any existing development server first so the API port is free. These npm commands work across Windows, macOS and Linux without shell-specific environment assignments.
+
+If startup fails, check your Node version, make sure ports 4000 and 5173 are available, and allow the initial MongoDB download. On systems without a supported MongoDB binary or required system libraries, use a compatible local MongoDB installation or Atlas through `MONGODB_URI`.
 
 ## Architecture
 
@@ -106,19 +117,17 @@ npm run format:check
 
 This showcase contains the runnable application. The automated test suite is maintained separately; test files and browser-test tooling are not included here. Phase documents retain the verification results recorded during development.
 
-## Deployment
+## Deploy on Render
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for the Free Render blueprint and environment setup. Express serves the built frontend and API from one origin. Health status is available at `/api/health`.
+Express serves the built frontend and API from one origin. The included `render.yaml` selects the Free Node service and sets `NODE_ENV=production`.
 
-Docker and Compose configuration are also included:
+1. Connect your fork or copy to Render and create a Blueprint from `main`.
+2. Set `MONGODB_URI` privately to your MongoDB Atlas connection string.
+3. Set `CLIENT_ORIGIN` to the exact HTTPS service origin, without a trailing slash.
+4. Add the service's outbound IP ranges from Render's Connect panel to Atlas Network Access.
+5. Deploy and check `/api/health`, sign-in, registration and the three role workflows.
 
-```sh
-# First set a strong JWT_SECRET in .env.
-docker compose up --build -d
-docker compose exec app npm run setup:hr
-```
-
-Open **http://localhost:4000**. Compose persists MongoDB and uploads in Docker volumes. Configure HTTPS, secure cookies, authenticated database access, backups, and durable upload storage for real deployments.
+The blueprint generates `JWT_SECRET` and enables secure cookies. Production startup does not seed or reset records. The free service can sleep, and uploaded photos use temporary storage. Never put real employee data or database credentials in the public repository.
 
 ## Credits and copyright
 

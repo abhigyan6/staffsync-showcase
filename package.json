@@ -8,7 +8,7 @@
     "dev:client": "vite --host 127.0.0.1",
     "dev:server": "nodemon --watch server --ext js,json --signal SIGTERM --delay 500ms server/server.js",
     "build": "vite build",
-    "start": "NODE_ENV=production node server/server.js",
+    "start": "node server/server.js",
     "seed": "node server/seed-cli.js",
     "setup:hr": "node server/setup-hr.js",
     "format": "prettier --write client/src server vite.config.js",
@@ -47,5 +47,8 @@
     "nodemon": "^3.1.14",
     "prettier": "^3.9.9",
     "vite": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }
