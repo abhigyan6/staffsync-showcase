@@ -73,7 +73,6 @@ server/
   services/              Scoping, notifications, and audits
   app.js                 Express setup and static serving
   server.js              Startup and shutdown
-tests/                   API and browser workflow tests
 render.yaml              Free Render deployment blueprint
 ```
 
@@ -98,24 +97,14 @@ Public HR/Manager registration is intentional for this showcase. Restrict privil
 - Hosted photos use temporary local storage and can disappear after restarts or redeploys.
 - SSO, MFA, multiple organizations, and enterprise load testing are outside this capstone's scope.
 
-## Verification
+## Build and formatting
 
 ```sh
-npm test
 npm run build
 npm run format:check
 ```
 
-API tests use an isolated temporary database and cover authorization, team isolation, leave concurrency, attendance uniqueness, training ownership, announcements, session revocation, and validation.
-
-Browser workflow tests start an isolated frontend, API, and database:
-
-```sh
-npx playwright install chromium
-npm run test:browser
-```
-
-On macOS they can use installed Google Chrome; `PLAYWRIGHT_CHROME_PATH` selects an existing executable.
+This showcase contains the runnable application. The automated test suite is maintained separately; test files and browser-test tooling are not included here. Phase documents retain the verification results recorded during development.
 
 ## Deployment
 

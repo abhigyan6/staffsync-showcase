@@ -9,12 +9,10 @@
     "dev:server": "nodemon --watch server --ext js,json --signal SIGTERM --delay 500ms server/server.js",
     "build": "vite build",
     "start": "NODE_ENV=production node server/server.js",
-    "test": "node --test --test-concurrency=1 tests/*.test.js",
     "seed": "node server/seed-cli.js",
     "setup:hr": "node server/setup-hr.js",
-    "format": "prettier --write client/src server tests vite.config.js",
-    "format:check": "prettier --check client/src server tests vite.config.js",
-    "test:browser": "playwright test"
+    "format": "prettier --write client/src server vite.config.js",
+    "format:check": "prettier --check client/src server vite.config.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -45,12 +43,10 @@
     "zod": "^4.1.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
     "@vitejs/plugin-react": "^5.0.0",
     "concurrently": "^9.2.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.9.9",
-    "supertest": "^7.1.0",
     "vite": "^7.1.0"
   }
 }
