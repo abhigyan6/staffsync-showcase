@@ -1087,10 +1087,32 @@ p {
   padding: 20px 0;
 }
 .boot-loading {
-  max-width: 500px;
-  margin: 20vh auto;
-  padding: 30px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+  background: var(--bg);
   color: var(--accent);
+}
+.boot-loading-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+}
+.boot-loading-message p {
+  margin: 0;
+  font-size: 14px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .boot-loading .MuiCircularProgress-root,
+  .boot-loading .MuiCircularProgress-circle {
+    animation: none;
+  }
 }
 .notification-drawer.MuiDrawer-paper,
 .detail-drawer.MuiDrawer-paper {

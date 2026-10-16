@@ -12,6 +12,7 @@ import {
   ThemeProvider,
   createTheme,
   CssBaseline,
+  CircularProgress,
   Button,
   IconButton,
   Tooltip,
@@ -618,9 +619,21 @@ export default function App() {
       <CssBaseline />
       <AppContext.Provider value={{ revision, refresh, toast, mode, setMode }}>
         {status === "loading" ? (
-          <div className="boot-loading">
-            <SquaresFour size={40} weight="fill" />
-            <Loading />
+          <div
+            className="boot-loading"
+            role="status"
+            aria-label="Opening StaffSync"
+          >
+            <Brand size={36} />
+            <div className="boot-loading-message">
+              <CircularProgress
+                size={18}
+                thickness={4}
+                color="inherit"
+                aria-hidden="true"
+              />
+              <p>Checking your session…</p>
+            </div>
           </div>
         ) : !user ? (
           <Suspense fallback={<Loading />}>
