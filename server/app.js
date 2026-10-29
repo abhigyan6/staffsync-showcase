@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Abhigyan Dwivedi.
+ * StaffSync — limited local evaluation only. See LICENSE and NOTICE.md.
+ */
+
 import express from "express";
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";

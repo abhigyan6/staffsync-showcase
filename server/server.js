@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Abhigyan Dwivedi.
+ * StaffSync — limited local evaluation only. See LICENSE and NOTICE.md.
+ */
+
 import "dotenv/config";
 import { randomBytes } from "node:crypto";
 import fs from "node:fs/promises";

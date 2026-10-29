@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Abhigyan Dwivedi.
+ * StaffSync — limited local evaluation only. See LICENSE and NOTICE.md.
+ */
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";

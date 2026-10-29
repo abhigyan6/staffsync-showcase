@@ -4,6 +4,8 @@ A MERN human resource management application for HR, managers, and employees. Bu
 
 **[Open the live demo](https://staffsync-demo.onrender.com)**
 
+**Evaluation only:** local review is permitted under [LICENSE](LICENSE). Do not republish this project or submit it, in whole or in part, as your own academic, competition, recruitment, or client work. Attribution alone does not grant reuse permission. See the [authorship record](AUTHORSHIP.md).
+
 > Demo project · Fictional data only. The free Render service can take about a minute to wake after being idle. Registration allows all three roles for evaluation; this demo must not contain real employee or payroll data.
 
 ## Demo accounts
@@ -131,6 +133,6 @@ The blueprint generates `JWT_SECRET` and enables secure cookies. Production star
 
 ## Credits and copyright
 
-© 2026 Abhigyan Dwivedi. All rights reserved for original StaffSync code and branding. This repository is public for viewing and evaluation; no open-source license is granted. See [NOTICE.md](NOTICE.md).
+© 2026 Abhigyan Dwivedi. All rights reserved for original StaffSync code and branding. This repository is public for viewing and local evaluation under [LICENSE](LICENSE); no open-source license is granted. Republishing or submitting the project as someone else's original work is not permitted. See [NOTICE.md](NOTICE.md) and [AUTHORSHIP.md](AUTHORSHIP.md). GitHub's applicable viewing and forking rights and rights provided by law remain unaffected.
 
 Open-source libraries, Phosphor icons, and the DM Sans and Instrument Serif fonts retain their respective licenses and copyrights.

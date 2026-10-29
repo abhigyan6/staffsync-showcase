@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Abhigyan Dwivedi.
+ * StaffSync — limited local evaluation only. See LICENSE and NOTICE.md.
+ */
+
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
